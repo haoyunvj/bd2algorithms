@@ -1,0 +1,226 @@
+1 -  package aula;
+import java.util.Scanner;
+
+public class aula {
+	public static void main(String[] args) {
+		// 1
+		 Scanner sc = new Scanner(System.in);
+		 System.out.println("Informe quantos anos tem a sua idade");
+		 int y = sc.nextInt();
+		 System.out.println("Informe quantos meses tem a sua idade");
+		 int m = sc.nextInt();
+		 System.out.println("Informe quantos dias tem a sua idade");
+		 int d = sc.nextInt();
+		
+		 int yToD = y * 365;
+		 int yToM = m * 30;
+		 
+		 int days = (yToD + yToM + d);
+		 
+		 sc.close();
+		 System.out.println("Você já viveu " + days + " dias");
+	}
+}
+
+teste de mesa: 
+
+Passo	Operação	                      Valor/Resultado
+1	Entrada de y (anos)	                    25
+2	Entrada de m (meses)	                     6
+3	Entrada de d (dias)	                      10
+4	yToD = y * 365	25 * 365 =                    9125
+5	yToM = m * 30	6 * 30 =                      180
+6	days = yToD + yToM + d	9125 + 180 + 10 =      10315
+7	Imprime Você já viveu 10315 dias	         10315
+
+
+// ----------------------------------------------------------------------------------------------------------------------------
+
+2 - package aula;
+import java.util.Scanner;
+
+public class aula {
+	public static void main(String[] args) {
+		// 2
+		 Scanner sc = new Scanner(System.in);
+		 System.out.println("Informe a quantidade de eleitores");
+		 int eleitores = sc.nextInt();
+		 
+		 sc.nextLine();
+		 
+		 System.out.println("Informe quantos votos brancos houveram");
+		 int votosBrancos = sc.nextInt();
+		 
+		 System.out.println("Informe quantos votos nulos houveram");	
+		 int votosNulos = sc.nextInt();
+		 
+		 System.out.println("Informe quantos quantos votos validos houveram");
+		 int votosValidos = sc.nextInt();
+		 
+		 float percenBranco = eleitores * votosBrancos / 100;
+		 float percenNulos = eleitores * votosNulos / 100;
+		 float percenValidos = eleitores * votosValidos / 100;
+		 
+		 System.out.println("A relação entre os votos em branco e eletoires foram de " + percenBranco + "%");
+		 System.out.println("A relação entre os votos em branco e eletoires foram de " + percenNulos + "%");
+		 System.out.println("A relação entre os votos em branco e eletoires foram de " + percenValidos + "%");
+
+		 sc.close();
+		 
+	}
+}
+
+PASSO	OPERAÇÃO	                                                                      VALOR/RESULTADO
+1	Entrada: Número de eleitores	                                                           1000
+2	Entrada: Votos brancos	                                                                   150
+3	Entrada: Votos nulos	                                                                   200
+4	Entrada: Votos válidos	                                                                   650
+5	Cálculo de votos brancos	1000 * 150 / 100 =                                         1500
+6	Cálculo de votos nulos	1000 * 200 / 100 =                                                 2000
+7	Cálculo de votos válidos	1000 * 650 / 100 =                                         6500
+8	Saída (votos brancos)	"A relação entre os votos em branco e eleitores foram de 1500%"     -
+9	Saída (votos nulos)	"A relação entre os votos nulos e eleitores foram de 2000%"         -
+10	Saída (votos válidos)	"A relação entre os votos válidos e eleitores foram de 6500%"       -
+
+// -------------------------------------------------------------------------------------------------------------------------------------------------------
+
+3 - package aula;
+import java.util.Scanner;
+
+public class aula {
+	public static void main(String[] args) {
+		// 3
+
+		 Scanner sc = new Scanner(System.in);
+		 System.out.println("Informe seu salario");
+		 float salary = sc.nextInt();
+		 
+		 sc.nextLine();
+		 
+		 System.out.println("Informe quantos receberá de reajuste");
+		 float reSalary = sc.nextInt();
+		 
+		 float res = (salary * reSalary / 100) + salary; 
+		 
+		 System.out.println("Seu salário passara a ser: " + res);
+
+		 sc.close();
+		 
+	}
+}
+ 
+PASSO	OPERAÇÃO	                                                                VALOR/RESULTADO
+1	O programa solicita o salário.	Usuário insere o valor                                2000.0
+2	O programa armazena o valor do salário em salary.	                           salary = 2000.0
+3	O programa solicita o reajuste.	Usuário insere o valor                                 10.0
+4	O programa armazena o valor do reajuste em reSalary.	                               reSalary = 10.0
+5	O cálculo do novo salário é feito: (salary * reSalary / 100) + salary.	            (2000.0 * 10.0 / 100) + 2000.0
+6	O cálculo é realizado em duas partes: 2000.0 * 10.0 / 100 = 200.0.	               res = 200.0 + 2000.0
+7	O resultado final é: res = 2200.0.	O novo salário após o reajuste é 2200.0.		-
+8	O programa exibe a mensagem com o novo salário.	"Seu salário passará a ser: 2200.0"		-
+9	O scanner é fechado.	Fim do programa.							-
+
+// ------------------------------------------------------------------------------------------------------------------------------------------
+
+4 - package aula;
+import java.util.Scanner;
+
+public class aula {
+	public static void main(String[] args) {
+		// 4
+		/* O custo de um carro novo ao consumidor é a soma do custo de fábrica com a porcentagem do distribuidor e dos impostos (aplicados ao custo de fábrica). 
+		 * Supondo que o percentual do distribuidor seja de 28% e os impostos de 45%, escrever um algoritmo para ler o custo de fábrica de um carro, calcular e escrever 
+		 * o custo final ao consumidor. 
+		*/
+
+		 Scanner sc = new Scanner(System.in);
+		 System.out.println("Informe o custo de fábrica do carro");
+		 float price = sc.nextFloat();
+		 
+		 sc.nextLine();
+		 
+		 float janjas = (price * 28) / 100;
+		 float janjas2 = (price * 45) / 100; 
+		 float left = (janjas + janjas2 + price);
+		 
+		 System.out.println("O valor de custo final é de: " + left);
+
+		 sc.close();
+		 
+	}
+}
+
+PASSO	                                                  OPERAÇÃO	                                                        VALOR/RESULTADO
+1	                                                Solicitar ao usuário o custo de fábrica do carro	-
+2	                                                 O usuário informa o custo de fábrica (10000.00)	price = 10000.00
+3	                                                Calcular 28% do custo de fábrica (distribuidor)	janjas = (10000 * 28) / 100
+4	                                                 Resultado do cálculo de janjas	janjas = 2800.00
+5	                                                Calcular 45% do custo de fábrica (impostos)	janjas2 = (10000 * 45) / 100
+6	                                                Resultado do cálculo de janjas2	janjas2 = 4500.00
+7	                  Calcular o custo final somando o custo de fábrica, distribuidor e impostos	left = janjas + janjas2 + price
+8	                                             Resultado do cálculo do custo final	left = 2800.00 + 4500.00 + 10000.00 = 17300.00
+9	                                                       Exibir o custo final ao consumidor	"O valor de custo final é de: 17300.0"
+
+// -----------------------------------------------------------------------------------------------------------------------------------------
+
+5 - package aula;
+import java.util.Scanner;
+
+public class aula {
+	public static void main(String[] args) {
+		// 5
+
+		 Scanner sc = new Scanner(System.in);
+		 
+		 System.out.println("Informe a quantidade de carros vendidos");
+		 int numCars = sc.nextInt();
+		 
+		 System.out.println("Informe a comissão fixa de cada carro vendido");
+		 float valueByCars = sc.nextFloat();
+		 
+		 System.out.println("Informe o salário fixo");
+		 float salFix = sc.nextFloat();
+		 
+		 double totalCars = numCars * valueByCars;
+		 
+		 double totalCarsFive = (totalCars * 0.05) + totalCars; 
+
+		 System.out.println("O salário do vendedor é de: " + (totalCarsFive + salFix));
+
+		 sc.close();
+		 
+	}
+}
+
+PASSO	OPERAÇÃO	                                        VALOR,RESULTADO
+1	Entrada do número de carros	numCars =                      valor fornecido
+2	Entrada da comissão fixa por carro	valueByCars =          valor fornecido
+3	Entrada do salário fixo	salFix =                                valor fornecido
+4	Calcula o total de comissão por carros	totalCars =                   numCars * valueByCars
+5	Calcula o total com 5% de comissão adicional	totalCarsFive =            (totalCars * 0.05) + totalCars
+6	Soma o salário fixo com o total calculado	totalSalario =         totalCarsFive + salFix
+7	Exibe o salário do vendedor	Salário =                           totalSalario
+
+// ------------------------------------------------------------------------------------------------------------------------------------------
+
+public class aula {
+	public static void main(String[] args) {
+		// 6
+		 Scanner sc = new Scanner(System.in);
+		 
+		 System.out.println("Informe a temperatura em Fahrenheit");
+		 double fahrenheit = sc.nextDouble();
+		 
+		 double celsius = (fahrenheit - 32) * 5/9;
+		 
+		 System.out.println("Essa temperatura em Celsius é: " + celsius);
+
+		 sc.close();
+		 
+	}
+}
+
+PASSO	                                          OPERAÇÃO	                   VALOR,RESULTADO
+1	                               Entrada da temperatura em Fahrenheit	    fahrenheit = valor fornecido
+2	                               Calcula o valor em Celsius	           celsius = (fahrenheit - 32) * 5/9
+3	Exibe o valor em Celsius	                                         celsius = resultado da operação de conversão
