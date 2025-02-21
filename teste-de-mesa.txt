@@ -236,3 +236,30 @@ public class aula {
 // ------------------------------------------------------------------------------------------------------------------------------------------
 
 10 - 
+import java.util.Scanner;
+public class aula {
+
+	public static void main(String[] args) {
+
+		 Scanner sc = new Scanner(System.in);
+		 
+		 System.out.println("Fale a nota 1: ");
+		 int nota1 = sc.nextInt();
+		 
+		 System.out.println("Fale a nota 2: ");
+		 int nota2 = sc.nextInt();
+		 
+		 double price;
+
+		 if ((nota1 + nota2) / 2 >= 6) {
+			 System.out.println("APROVADO");
+		 }	else if ((nota1 + nota2) / 2 < 6) {
+			 System.out.println("REPROVADO");
+		 }
+		 
+		 System.out.println("Sua média foi: " + (nota1 + nota2) / 2);
+
+		 sc.close();
+	}
+}
+
