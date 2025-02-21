@@ -211,3 +211,28 @@ public class aula {
 // ------------------------------------------------------------------------------------------------------------------------------------------
 
 9 - 
+import java.util.Scanner;
+public class aula {
+
+	public static void main(String[] args) {
+		// 8
+		 Scanner sc = new Scanner(System.in);
+		 
+		 System.out.println("Quantas maçãs você quer levar");
+		 int apple = sc.nextInt();
+		 double price;
+
+		 if (apple < 12) {
+			 price = 1.30;
+		 }	else
+			 price = 1.00;
+		 
+		 System.out.println("Sua compra ficou: " + (price * apple) );
+
+		 sc.close();
+	}
+}
+
+// ------------------------------------------------------------------------------------------------------------------------------------------
+
+10 - 
