@@ -292,3 +292,43 @@ public class aula {
 // ------------------------------------------------------------------------------------------------------------------------------------------
 
 12 -
+
+// ------------------------------------------------------------------------------------------------------------------------------------------
+
+13 - 
+
+// ------------------------------------------------------------------------------------------------------------------------------------------
+
+14 - Ler a hora de início e a hora de fim de um jogo de Xadrez (considere apenas horas inteiras, sem os minutos) e calcule a duração do jogo em horas, sabendo-se que o tempo máximo de duração do jogo é de 24 horas e que o jogo pode iniciar em um dia e terminar no dia seguinte.
+
+import java.util.Scanner;
+public class aula {
+	
+	public static void main(String[] args) {
+		
+	Scanner sc = new Scanner(System.in);
+	 
+	System.out.println("Hora de inicio (MIN 0, MAX 24): ");
+	int start = sc.nextInt();
+	 
+	System.out.println("Hora de término (MIN 0, MAX 24): ");
+	int end = sc.nextInt();
+	
+	int hour = 24;
+	
+	if (end < start) {
+		end = 24 - end + start;
+		System.out.println("");
+	}
+	
+	System.out.println(total);
+	
+//	if (start == end) {
+//		System.out.println(hour);
+//	}	else if (start <= end) {
+//		System.out.println(total);
+//	}
+	
+	sc.close();
+	}
+}
