@@ -263,3 +263,32 @@ public class aula {
 	}
 }
 
+// ------------------------------------------------------------------------------------------------------------------------------------------
+
+11 -
+import java.util.Scanner;
+public class aula {
+
+	public static void main(String[] args) {
+
+		 Scanner sc = new Scanner(System.in);
+		 
+		 System.out.println("Em que ano nós estamos? ");
+		 int year = sc.nextInt();
+		 
+		 System.out.println("Em que ano você nasceu? ");
+		 int birth = sc.nextInt();
+		 
+		 if (year - birth >= 18) {
+			 System.out.println("Você pode votar");
+		 }	else if (year - birth < 18) {
+			 System.out.println("Você não pode votar");
+		 }
+		 
+		 sc.close();
+	}
+}
+
+// ------------------------------------------------------------------------------------------------------------------------------------------
+
+12 -
