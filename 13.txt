@@ -1,0 +1,25 @@
+13 -  Ler dois valores (considere que não serão lidos valores iguais) e escrevê-los em ordem crescente. 
+
+import java.util.Scanner;
+public class aula {
+	
+	public static void main(String[] args) {
+		
+	Scanner sc = new Scanner(System.in);
+	 
+	System.out.println("Digite um número: ");
+	int value1 = sc.nextInt();
+	 
+	System.out.println("Digite outro número: ");
+	int value2 = sc.nextInt();
+	
+		if (value1 != value2 && value1 > value2) {
+			System.out.print(value1 + " " + value2);
+		}	else if (value1 != value2 && value2 > value1) {
+			System.out.print(value2 + " " + value1);
+		}	else	
+			return;
+	
+	sc.close();
+	}
+}

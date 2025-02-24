@@ -1,0 +1,41 @@
+17 - Programa que leia as notas e calcule a média de LP1 deste semestre, referente a um determinado aluno. Fórmula para cálculo de média de LP1;
+(P1*0.6+((E1+E2)/2)*0.4)*0.5+(max(((P1*0.6+((E1+E2)/2)*0.4)-5.9),0)/((P1*0.6+((E1+E2)/2)*0.4)-5.9))*(API*0.5)+X+(SUB*0.3)
+
+package aula;
+
+import java.util.Scanner;
+
+public class aula {
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Informe a nota da P1: ");
+        double P1 = scanner.nextDouble();
+
+        System.out.print("Informe a nota da E1: ");
+        double E1 = scanner.nextDouble();
+
+        System.out.print("Informe a nota da E2: ");
+        double E2 = scanner.nextDouble();
+
+        System.out.print("Informe a nota do API: ");
+        double API = scanner.nextDouble();
+
+        System.out.print("Informe a nota X: ");
+        double X = scanner.nextDouble();
+
+        System.out.print("Informe a nota SUB: ");
+        double SUB = scanner.nextDouble();
+
+        double parte1 = (P1 * 0.6) + (((E1 + E2) / 2) * 0.4);
+
+        double parte2 = Math.max(parte1 - 5.9, 0) / (parte1 - 5.9);
+
+        double mediaFinal = (parte1 * 0.5) + (parte2 * (API * 0.5)) + X + (SUB * 0.3);
+
+        System.out.println("A média final do aluno é: " + mediaFinal);
+
+        scanner.close();
+    }
+}
