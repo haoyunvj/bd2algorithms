@@ -14,9 +14,9 @@ public class aula {
 	int value2 = sc.nextInt();
 	
 		if (value1 != value2 && value1 > value2) {
-			System.out.print(value1 + " " + value2);
-		}	else if (value1 != value2 && value2 > value1) {
 			System.out.print(value2 + " " + value1);
+		}	else if (value1 != value2 && value2 > value1) {
+			System.out.print(value1 + " " + value2);
 		}	else	
 			return;
 	
